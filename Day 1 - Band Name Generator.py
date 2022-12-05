@@ -1,3 +1,5 @@
+#Generating a band name
+
 greeting = "Hello! Welcome to the band name generator! \n\nPlease answer the following the questions..."
 
 print(greeting + "\n")
