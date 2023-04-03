@@ -60,4 +60,18 @@ elif computer_choice == 2:
 
 if my_choice == computer_choice:
   print("It's a draw!")
-elif
+elif my_choice == 0:
+  if computer_choice == 1:
+    print("You lose.")
+  elif computer_choice == 2:
+    print("Congratulations! You win!")
+elif my_choice == 1:
+  if computer_choice == 2:
+    print("You lose.")
+  elif computer_choice == 0:
+    print("Congratulations! You win!")
+elif my_choice == 2:
+  if computer_choice == 0:
+    print("You lose.")
+  elif computer_choice == 1:
+    print("Congratulations! You win!")
