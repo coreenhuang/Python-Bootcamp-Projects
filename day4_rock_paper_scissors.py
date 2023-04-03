@@ -39,10 +39,22 @@ elif my_choice == "1":
   print(paper)
 elif my_choice == "2":
   print(scissors)
+else:
+  print("Please try again with a valid option.")
+  quit()
 
 # Randomize number corresponding to selection for computer
 
+print("Computer chose:")
+
 computer_choice = random.randint(0,2)
 
-print("Computer chose:")
+if computer_choice == 0:
+  print(rock)
+elif computer_choice == 1:
+  print(paper)
+elif computer_choice == 2:
+  print(scissors)
+
+# Compare selections to see who wins
 
