@@ -31,13 +31,13 @@ scissors = '''
 
 # User selects one option
 
-my_choice = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n")
+my_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 
-if my_choice == "0":
+if my_choice == 0:
   print(rock)
-elif my_choice == "1":
+elif my_choice == 1:
   print(paper)
-elif my_choice == "2":
+elif my_choice == 2:
   print(scissors)
 else:
   print("Please try again with a valid option.")
@@ -58,3 +58,6 @@ elif computer_choice == 2:
 
 # Compare selections to see who wins
 
+if my_choice == computer_choice:
+  print("It's a draw!")
+elif
