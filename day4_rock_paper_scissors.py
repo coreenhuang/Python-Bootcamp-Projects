@@ -29,9 +29,20 @@ scissors = '''
 ---.__(___)
 '''
 
-my_choice = random.randint(0,2)
+# User selects one option
+
+my_choice = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n")
+
+if my_choice == "0":
+  print(rock)
+elif my_choice == "1":
+  print(paper)
+elif my_choice == "2":
+  print(scissors)
+
+# Randomize number corresponding to selection for computer
 
 computer_choice = random.randint(0,2)
 
-print(my_choice)
-print(computer_choice)
+print("Computer chose:")
+
