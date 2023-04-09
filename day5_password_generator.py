@@ -19,6 +19,15 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 easy_password  = []
 
 # pick a random letter nr_letters times
+
+for nr_letter in range(0, nr_letters):
+    
+  easy_pw_element = random.choice(letters)
+
+  easy_password.append(easy_pw_element)
+
+print("".join(easy_password))
+
 # pick a random symbol nr_symbols times
 # pick a random number nr_numbers times
 
