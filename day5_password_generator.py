@@ -20,15 +20,15 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 # Pick a random letter nr_letters times
 
-# easy_letter_password  = []
+easy_letter_password  = []
 
-# for nr_letter in range(0, nr_letters):
+for nr_letter in range(0, nr_letters):
     
-#   easy_letter_pw_element = random.choice(letters)
+  easy_letter_pw_element = random.choice(letters)
 
-#   easy_letter_password.append(easy_letter_pw_element)
+  easy_letter_password.append(easy_letter_pw_element)
 
-# easy_letters = "".join(easy_letter_password)
+easy_letters = "".join(easy_letter_password)
 
 # print(easy_letters)
 
@@ -44,10 +44,25 @@ for nr_symbol in range(0, nr_symbols):
 
 easy_symbols = "".join(easy_symbol_password)
 
-print(easy_symbols)
+# print(easy_symbols)
 
 # Pick a random number nr_numbers times
 
+easy_number_password = []
+
+for nr_number in range(0, nr_numbers):
+
+  easy_number_pw_element = random.choice(numbers)
+
+  easy_number_password.append(easy_number_pw_element)
+
+easy_numbers = "".join(easy_number_password)
+
+# print(easy_numbers)
+
+# Concatenate letters, symbols, and numbers for easy password generator
+
+print(easy_letters + easy_symbols + easy_numbers)
 
 # -------------------------------------------------------------------------------
 
