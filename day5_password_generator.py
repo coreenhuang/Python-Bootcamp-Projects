@@ -30,8 +30,6 @@ for nr_letter in range(0, nr_letters):
 
 easy_letters = "".join(easy_letter_password)
 
-# print(easy_letters)
-
 # Pick a random symbol nr_symbols times
 
 easy_symbol_password = []
@@ -44,8 +42,6 @@ for nr_symbol in range(0, nr_symbols):
 
 easy_symbols = "".join(easy_symbol_password)
 
-# print(easy_symbols)
-
 # Pick a random number nr_numbers times
 
 easy_number_password = []
@@ -57,8 +53,6 @@ for nr_number in range(0, nr_numbers):
   easy_number_password.append(easy_number_pw_element)
 
 easy_numbers = "".join(easy_number_password)
-
-# print(easy_numbers)
 
 # Concatenate letters, symbols, and numbers for easy password generator
 
