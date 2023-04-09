@@ -13,24 +13,39 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+# -------------------------------------------------------------------------------
+
 #Easy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
-easy_password  = []
+# Pick a random letter nr_letters times
 
-# pick a random letter nr_letters times
+# easy_letter_password  = []
 
-for nr_letter in range(0, nr_letters):
+# for nr_letter in range(0, nr_letters):
     
-  easy_pw_element = random.choice(letters)
+#   easy_letter_pw_element = random.choice(letters)
 
-  easy_password.append(easy_pw_element)
+#   easy_letter_password.append(easy_letter_pw_element)
 
-print("".join(easy_password))
+# print("".join(easy_letter_password))
 
-# pick a random symbol nr_symbols times
-# pick a random number nr_numbers times
+# Pick a random symbol nr_symbols times
 
+easy_symbol_password = []
+
+for nr_symbol in range(0, nr_symbols):
+
+  easy_symbol_pw_element = random.choice(symbols)
+
+  easy_symbol_password.append(easy_symbol_pw_element)
+
+print("".join(easy_symbol_password))
+
+# Pick a random number nr_numbers times
+
+
+# -------------------------------------------------------------------------------
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
