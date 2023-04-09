@@ -68,3 +68,15 @@ print(easy_letters + easy_symbols + easy_numbers)
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+# Concatenate lists of randomized letters, symbols and numbers 
+
+hard_password_elements = easy_letter_password + easy_symbol_password + easy_number_password
+
+# Shuffle elements in random order
+
+random.shuffle(hard_password_elements)
+
+# Join elements together into a string to generate a hard level password
+
+print("".join(hard_password_elements))
