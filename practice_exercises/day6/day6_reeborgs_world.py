@@ -1,4 +1,4 @@
-# Move in a square
+# Move in a square-----------
 
 # def turn_right():
 #     turn_left()
@@ -15,7 +15,7 @@
 # turn_right()
 # move()
 
-# Move over hurdles
+# Move over hurdles-----------
 
 # def turn_right():
 #     turn_left()
