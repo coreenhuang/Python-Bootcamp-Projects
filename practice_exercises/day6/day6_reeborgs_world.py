@@ -129,3 +129,14 @@
 #         move()
 #     elif wall_in_front():
 #         jump_only()
+
+# Maze Challenge -----------------------------
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+        
+while not at_goal():
+    if front_is_clear() and wall_on_right():
+        move()
