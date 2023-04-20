@@ -145,3 +145,6 @@ while not at_goal():
         move()
     else:
         turn_left()
+
+# Intermediate Debugging Challenge against infinite loop scenarios
+# Come back after day 15
