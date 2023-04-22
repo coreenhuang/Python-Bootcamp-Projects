@@ -7,10 +7,12 @@ word_list = ["aardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
 
-word_split = chosen_word.split()
+word_split = list(chosen_word)
 
 print(word_split)
 
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+
+guess = input("Guess a letter: ")
 
 #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
