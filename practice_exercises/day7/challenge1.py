@@ -16,3 +16,8 @@ print(word_split)
 guess = input("Guess a letter: ")
 
 #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
+
+number_of_letters = len(word_split)
+
+print(number_of_letters)
+
