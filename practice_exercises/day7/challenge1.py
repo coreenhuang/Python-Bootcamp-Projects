@@ -21,3 +21,8 @@ number_of_letters = len(word_split)
 
 print(number_of_letters)
 
+for letter in word_split:
+    if guess == letter:
+        print("Right")
+    else:
+        print("Wrong")
