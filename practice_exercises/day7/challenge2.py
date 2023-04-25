@@ -12,14 +12,13 @@ print(f'Pssst, the solution is {chosen_word}.')
 display = []
 
 #For each letter in the chosen_word, add a "_" to 'display'.
+#So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
 
 word_length = len(chosen_word)
 
-#So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
-
 for letter in range(word_length):
     display.append("_")
-
+    
 print(display)
 
 guess = input("Guess a letter: ").lower()
