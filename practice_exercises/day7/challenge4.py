@@ -1,4 +1,4 @@
-#Step 4
+# Keeping track of the player's lives
 
 import random
 
