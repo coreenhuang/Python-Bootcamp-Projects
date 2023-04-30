@@ -93,7 +93,10 @@ while not end_of_game:
 
         if letter != guess:
             lives -= 1
-      
+        
+        if lives < 1:
+          end_of_game = True
+          print("You lose!")
 
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
