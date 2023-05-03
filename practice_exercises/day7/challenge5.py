@@ -45,13 +45,16 @@ while not end_of_game:
         #Check guessed letter
         for position in range(word_length):
             letter = chosen_word[position]
-            print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+            # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
             if letter == guess:
                 display[position] = letter
 
         #Check if user is wrong.
         if guess not in chosen_word:
             #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+
+            print(f"Letter {guess} is not in this word. You have lost one life.")
+
             lives -= 1
             if lives == 0:
                 end_of_game = True
