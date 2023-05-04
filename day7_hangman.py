@@ -1,12 +1,10 @@
-# Improving the User Experience
+# Hangman Game
 
 import random
-
 from practice_exercises.day7.hangman_art import *
-
 from practice_exercises.day7.hangman_words import word_list
 
-#TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
+# Choose random word from word list
 
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
@@ -14,44 +12,39 @@ word_length = len(chosen_word)
 end_of_game = False
 lives = 6
 
-#TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
-
 print(logo)
 
-#Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# Create blanks display for unknown chosen word
 
-#Create blanks
 display = []
 for _ in range(word_length):
     display += "_"
+
+# A list of all guessed letters
 
 guessed_letters = []
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
-    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
-
+    # Prompt user if they have already guessed a letter
     if guess in guessed_letters:
-
         print(f"You have already guessed the letter {guess}. Please guess another letter.")
     
     else:
-
         # Add letter to the guessed letters list
         guessed_letters.append(guess)
 
         #Check guessed letter
         for position in range(word_length):
             letter = chosen_word[position]
-            # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+
+            # If letter is in chosen word, replace blank 
             if letter == guess:
                 display[position] = letter
 
         #Check if user is wrong.
         if guess not in chosen_word:
-            #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
 
             print(f"Letter {guess} is not in this word. You have lost one life.")
 
@@ -68,5 +61,5 @@ while not end_of_game:
             end_of_game = True
             print("You win.")
 
-        #TODO-2: - Import the stages from hangman_art.py and make this error go away.
+        # Print hangman art with display 
         print(stages[lives])
