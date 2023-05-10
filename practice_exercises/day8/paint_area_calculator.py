@@ -1,7 +1,8 @@
 # Calculate how many cans of paint to buy
 
 def paint_calc(height, width, cover):
-    num_of_cans = round((height * width) / cover)
+    import math
+    num_of_cans = math.ceil((height * width) / cover)
     print(f"You'll need {num_of_cans} cans of paint.")
 
 # Test
