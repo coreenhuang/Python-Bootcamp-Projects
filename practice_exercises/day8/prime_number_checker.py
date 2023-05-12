@@ -10,5 +10,12 @@ def prime_checker(number):
     else:
         print("It's a prime number.")
 
+# Alternative if statement logic
+
+# is_prime = True
+# if number % i == 0:
+#   is_prime = False
+# if is_prime: print ....
+
 n = int(input("Check this number: "))
 prime_checker(number=n)
