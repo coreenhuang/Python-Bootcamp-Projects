@@ -33,4 +33,6 @@ shift = int(input("Type the shift number:\n"))
 #Add some code so that the program continues to work even if the user enters a shift number greater than 26. 
 #Hint: Think about how you can use the modulus (%).
 
+shift = shift % 26
+
 caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
