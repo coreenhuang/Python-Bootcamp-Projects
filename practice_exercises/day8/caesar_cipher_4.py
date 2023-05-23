@@ -44,7 +44,7 @@ while start_game:
 
   caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
 
-  replay = input("Type 'yes' if you want to go again. Otherwise type 'no'.")
+  replay = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
 
   if replay == "no":
     start_game = False
