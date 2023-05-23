@@ -17,7 +17,7 @@ def caesar(start_text, shift_amount, cipher_direction):
     
   print(f"Here's the {cipher_direction}d result: {end_text}")
 
-from art import logo
+from practice_exercises.day8.art import logo
 print(logo)
 
 # While start_game is true, replay entire game
