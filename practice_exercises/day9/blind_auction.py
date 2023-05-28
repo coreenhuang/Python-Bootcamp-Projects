@@ -12,6 +12,19 @@ while keep_bidding:
   
   bidders[bidder] = bid
   
-  print(bidders)
+  # print(bidders)
   
-  more_bidders = input("Is there anyone else who would like to bid? Type 'yes' or 'no'.")
+  more_bidders = input("Is there anyone else who would like to bid? Type 'yes' or 'no'.\n")
+
+  clear()
+
+  if more_bidders == 'no':
+    keep_bidding = False
+
+    highest_bid = max(bidders.values())
+    highest_bidder = max(bidders, key=bidders.get)
+
+    # print(highest_bid)
+    # print(highest_bidder)
+    
+    print(f"The highest bidder is {highest_bidder} with a bid of ${highest_bid}.")
