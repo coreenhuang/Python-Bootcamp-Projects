@@ -1,7 +1,7 @@
-from replit import clear
-from art import logo
+# from replit import clear
+# from art import logo
 
-print(logo)
+# print(logo)
 bidders = {}
 keep_bidding = True
 
@@ -13,7 +13,7 @@ while keep_bidding:
   
   more_bidders = input("Is there anyone else who would like to bid? Type 'yes' or 'no'.\n")
 
-  clear()
+  # clear()
 
   if more_bidders == 'no':
     keep_bidding = False
