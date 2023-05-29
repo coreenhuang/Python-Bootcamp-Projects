@@ -5,3 +5,5 @@ def format_name(f_name, l_name):
     return f_name.capitalize() + ' ' + l_name.capitalize()
 
 format_name('COREEN', 'HUANG')
+
+#Alternatively could use title() as well
