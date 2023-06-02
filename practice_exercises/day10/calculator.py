@@ -23,28 +23,32 @@ operations = {
     "/": divide
 }
 
-num1 = int(input("What's the first number?: "))
-continue_calculating = True
+def calculator():
 
-while continue_calculating:
+  num1 = int(input("What's the first number?: "))
+  continue_calculating = True
 
-  for operation in operations:
-      print(operation)
+  while continue_calculating:
 
-  operation_symbol = input("Pick an operation from the line above: ")
+    for operation in operations:
+        print(operation)
 
-  num2 = int(input("What's the next number?: "))
+    operation_symbol = input("Pick an operation from the line above: ")
 
-  operation_function = operations[operation_symbol]
+    num2 = int(input("What's the next number?: "))
 
-  answer = operation_function(num1, num2)
+    operation_function = operations[operation_symbol]
 
-  print(f"{num1} {operation_symbol} {num2} = {answer}")
+    answer = operation_function(num1, num2)
 
-  next_step = input(f"Type 'y' to continue calculating with {answer} or 'n' to exit.\n")
+    print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-  if next_step == 'y':
-      num1 = answer
-  elif next_step == 'n':
-      continue_calculating = False
-      print('Goodbye.')
+    next_step = input(f"Type 'y' to continue calculating with {answer} or 'n' to start a new calculation.\n")
+
+    if next_step == 'y':
+        num1 = answer
+    elif next_step == 'n':
+        continue_calculating = False
+        calculator()
+
+calculator()
