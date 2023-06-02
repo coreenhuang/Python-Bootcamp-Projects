@@ -24,16 +24,19 @@ operations = {
 }
 
 num1 = int(input("What's the first number?: "))
+continue_calculating = True
 
-for operation in operations:
-    print(operation)
+while continue_calculating:
 
-operation_symbol = input("Pick an operation from the line above: ")
+  for operation in operations:
+      print(operation)
 
-num2 = int(input("What's the second number?: "))
+  operation_symbol = input("Pick an operation from the line above: ")
 
-operation_function = operations[operation_symbol]
+  num2 = int(input("What's the second number?: "))
 
-answer = operation_function(num1, num2)
+  operation_function = operations[operation_symbol]
 
-print(f"{num1} {operation_symbol} {num2} = {answer}")
+  answer = operation_function(num1, num2)
+
+  print(f"{num1} {operation_symbol} {num2} = {answer}")
