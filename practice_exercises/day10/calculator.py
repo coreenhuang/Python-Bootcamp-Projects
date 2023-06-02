@@ -33,10 +33,18 @@ while continue_calculating:
 
   operation_symbol = input("Pick an operation from the line above: ")
 
-  num2 = int(input("What's the second number?: "))
+  num2 = int(input("What's the next number?: "))
 
   operation_function = operations[operation_symbol]
 
   answer = operation_function(num1, num2)
 
   print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+  next_step = input(f"Type 'y' to continue calculating with {answer} or 'n' to exit.\n")
+
+  if next_step == 'y':
+      num1 = answer
+  elif next_step == 'n':
+      continue_calculating = False
+      print('Goodbye.')
