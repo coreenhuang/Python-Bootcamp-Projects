@@ -28,6 +28,6 @@ if start_game == 'y':
     print(f"    Your cards: [{first_card}, {second_card}], current score: {user_total}")
     print(f"    Computer's first card: {computer_card}")
 
-
+    input("Would you like to hit or stand?")
 else:
     exit()
