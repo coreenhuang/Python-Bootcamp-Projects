@@ -25,6 +25,7 @@ if start_game == 'y':
 
     computer_card = random.choice(card_options)
 
+    print(f"test")
     print(f"Your cards: [{first_card}, {second_card}], current score: {user_total}")
     print(f"Computer's first card: {computer_card}")
 
