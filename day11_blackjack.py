@@ -25,9 +25,15 @@ if start_game == 'y':
 
     computer_card = random.choice(card_options)
 
-    print(f"    Your cards: [{first_card}, {second_card}], current score: {user_total}")
-    print(f"    Computer's first card: {computer_card}")
+    print(f"Your cards: [{first_card}, {second_card}], current score: {user_total}")
+    print(f"Computer's first card: {computer_card}")
 
-    input("Would you like to hit or stand?")
+    hit_or_stand = input("Would you like to hit or stand? Please type 'hit' or 'stand'.")
+
+    if hit_or_stand == 'hit':
+        additional_card = random.choice(card_options)
+        print(additional_card)
+
+
 else:
     exit()
