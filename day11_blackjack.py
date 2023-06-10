@@ -31,9 +31,19 @@ if start_game == 'y':
 
     hit_or_stand = input("Would you like to hit or stand? Please type 'hit' or 'stand'.")
 
+    #insert recursion here to continue hitting 
     if hit_or_stand == 'hit':
         additional_card = random.choice(card_options)
         print(additional_card)
+
+        user_total += additional_card
+        print(user_total)
+    elif hit_or_stand == 'stand':
+        computer_second_card = random.choice(card_options)
+        print(computer_second_card)
+
+        computer_total = computer_card + computer_second_card
+        print(computer_total)
 
 
 else:
