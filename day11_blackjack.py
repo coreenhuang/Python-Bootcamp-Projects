@@ -18,6 +18,11 @@ card_options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 if start_game == 'y':
     print(logo)
 
+    #new card function returns an integer
+    def add_card():
+        additional_card = random.choice(card_options)
+        return additional_card
+    
     #first round
     user_cards = []
 
@@ -35,27 +40,30 @@ if start_game == 'y':
     print(f"Your cards: {user_cards}, current score: {user_total}")
     print(f"Computer's first card: {computer_card}")
 
-    #second round onwards
-    hit_or_stand = input("Would you like to hit or stand? Please type 'y' to hit or 'n' to stand.")
+    def continue_playing():
+        
+        #second round onwards
+        hit_or_stand = input("Would you like to hit or stand? Please type 'y' to hit or 'n' to stand.\n")
 
-    #new card function returns an integer
-    def new_card():
-        additional_card = random.choice(card_options)
-        return additional_card
+        #insert recursion here to continue hitting 
+        if hit_or_stand == 'y':
+            new_card = add_card()
+            user_cards.append(new_card)
+            print(user_cards)
 
-    #insert recursion here to continue hitting 
-    if hit_or_stand == 'y':
-        additional_card = random.choice(card_options)
-        print(additional_card)
+            user_total += new_card
+            print(user_total)
 
-        user_total += additional_card
-        print(user_total)
-    elif hit_or_stand == 'n':
-        computer_second_card = random.choice(card_options)
-        print(computer_second_card)
+            continue_playing()
 
-        computer_total = computer_card + computer_second_card
-        print(computer_total)
+        elif hit_or_stand == 'n':
+            computer_second_card = random.choice(card_options)
+            print(computer_second_card)
+
+            computer_total = computer_card + computer_second_card
+            print(computer_total)
+
+    continue_playing()
 
 
 else:
