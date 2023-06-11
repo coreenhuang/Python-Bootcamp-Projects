@@ -19,17 +19,29 @@ if start_game == 'y':
     print(logo)
 
     #First round
+    user_cards = []
+
     first_card = random.choice(card_options)
     second_card = random.choice(card_options)
+    user_cards.append(first_card)
+    user_cards.append(second_card)
+
     user_total = first_card + second_card
 
+    computer_cards = []
     computer_card = random.choice(card_options)
+    computer_cards.append(computer_card)
 
-    print(f"test")
-    print(f"Your cards: [{first_card}, {second_card}], current score: {user_total}")
+    print(f"Your cards: {user_cards}, current score: {user_total}")
     print(f"Computer's first card: {computer_card}")
 
     hit_or_stand = input("Would you like to hit or stand? Please type 'hit' or 'stand'.")
+
+    def add_card(who):
+        additional_card = random.choice(card_options)
+
+
+
 
     #insert recursion here to continue hitting 
     if hit_or_stand == 'hit':
