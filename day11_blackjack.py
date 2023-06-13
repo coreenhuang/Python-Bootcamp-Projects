@@ -26,19 +26,16 @@ if start_game == 'y':
     #first round
     user_cards = []
 
-    first_card = random.choice(card_options)
-    second_card = random.choice(card_options)
-    user_cards.append(first_card)
-    user_cards.append(second_card)
+    for n in range(2):
+        user_cards.append(add_card())
 
-    user_total = first_card + second_card
+    user_total = sum(user_cards)
 
     computer_cards = []
-    computer_card = random.choice(card_options)
-    computer_cards.append(computer_card)
+    computer_cards.append(add_card())
 
     print(f"Your cards: {user_cards}, current score: {user_total}")
-    print(f"Computer's first card: {computer_card}")
+    print(f"Computer's first card: {computer_cards[0]}")
 
     def continue_playing():
         
@@ -51,8 +48,8 @@ if start_game == 'y':
             user_cards.append(new_card)
             print(user_cards)
 
-            user_total += new_card
-            print(user_total)
+            user_new_total = sum(user_cards)
+            print(user_new_total)
 
             continue_playing()
 
