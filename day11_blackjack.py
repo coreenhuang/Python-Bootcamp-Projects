@@ -66,5 +66,13 @@ logo = """
 # else:
 #     exit()
 
-#-------------------Solution---------------------
+#-------------------Pseudo-Code---------------------
 
+#have a deck
+#ace can be 1 or 11
+#yes or no to start game ----
+#if yes print logo, draw cards, 2 for user, 1 for computer
+#continue? hit or stand ---
+#if hit, add card to deck, print new total
+#put in recursion to keep hitting
+#if stand, add card to dealer
