@@ -75,4 +75,9 @@ logo = """
 #continue? hit or stand ---
 #if hit, add card to deck, print new total
 #put in recursion to keep hitting
+#if over 21, user loses automatically
 #if stand, add card to dealer
+#if total is under a certain amount ->check, then keep dealing
+#if over 21, dealer loses automatically
+#compare user to dealer, if tie, then draw
+#whoever is higher wins
