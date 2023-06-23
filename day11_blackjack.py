@@ -129,8 +129,15 @@ def deal_card():
     return random.choice(cards)
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
-#user_cards = []
-#computer_cards = []
+user_cards = []
+computer_cards = []
+
+user_cards.append(deal_card())
+user_cards.append(deal_card())
+computer_cards.append(deal_card())
+
+print(user_cards)
+print(computer_cards)
 
 #Hint 6: Create a function called calculate_score() that takes a List of cards as input 
 #and returns the score. 
