@@ -144,6 +144,10 @@ print(computer_cards)
 #Look up the sum() function to help you do this.
 
 def calculate_score(list):
+
+    if sum(list) == 21:
+        return 0
+
     return sum(list)
 
 #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
