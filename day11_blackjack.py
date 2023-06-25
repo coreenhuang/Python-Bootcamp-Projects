@@ -151,8 +151,8 @@ def calculate_score(list):
     if score == 21:
         return 0
     
-    if 11 in list and score >= 21:
-        
+    if 11 in list and score > 21:
+
 
     return score
 
