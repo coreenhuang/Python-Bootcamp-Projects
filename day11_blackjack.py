@@ -123,22 +123,27 @@ logo = """
 #11 is the Ace.
 import random
 
+play_game = True
+
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 def deal_card():
     return random.choice(cards)
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
-user_cards = []
-computer_cards = []
 
-user_cards.append(deal_card())
-user_cards.append(deal_card())
-computer_cards.append(deal_card())
-computer_cards.append(deal_card())
+while play_game is True:
 
-print(user_cards)
-print(computer_cards)
+    user_cards = []
+    computer_cards = []
+
+    user_cards.append(deal_card())
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
+    computer_cards.append(deal_card())
+
+    print(user_cards)
+    print(computer_cards)
 
 #Hint 6: Create a function called calculate_score() that takes a List of cards as input 
 #and returns the score. 
@@ -148,25 +153,25 @@ print(computer_cards)
 
 #Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
 
-def calculate_score(deck):
-    score = sum(deck)
+    def calculate_score(deck):
+        score = sum(deck)
 
-    if score == 21:
-        return 0
-    
-    if 11 in deck and score > 21:
-        index = deck.index(21)
-        deck[index] = 1
+        if score == 21:
+            return 0
+        
+        if 11 in deck and score > 21:
+            index = deck.index(11)
+            deck[index] = 1
 
-    return score
+        return score
 
 #Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 
-user_score = calculate_score(user_cards)
-computer_score = calculate_score(computer_cards)
+    user_score = calculate_score(user_cards)
+    computer_score = calculate_score(computer_cards)
 
-if user_score == 0 or computer_score == 0 or user_score > 21:
-    
+    if user_score == 0 or computer_score == 0 or user_score > 21:
+        play_game = False
 
 #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
