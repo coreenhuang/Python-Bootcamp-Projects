@@ -88,10 +88,10 @@ logo = """
 
 ############### Blackjack Project #####################
 
-#Difficulty Normal 😎: Use all Hints below to complete the project.
-#Difficulty Hard 🤔: Use only Hints 1, 2, 3 to complete the project.
-#Difficulty Extra Hard 😭: Only use Hints 1 & 2 to complete the project.
-#Difficulty Expert 🤯: Only use Hint 1 to complete the project.
+#Difficulty Normal : Use all Hints below to complete the project.
+#Difficulty Hard : Use only Hints 1, 2, 3 to complete the project.
+#Difficulty Extra Hard : Only use Hints 1 & 2 to complete the project.
+#Difficulty Expert : Only use Hint 1 to complete the project.
 
 ############### Our Blackjack House Rules #####################
 
@@ -179,6 +179,11 @@ while play_game is True:
 
     if draw_card == 'y':
         user_cards.append(deal_card())
+
+        print(user_cards)
+        print(sum(user_cards))
+    elif draw_card == 'n':
+        play_game = False
 
 #Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
 
