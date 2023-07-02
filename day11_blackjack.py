@@ -167,23 +167,26 @@ while play_game is True:
 
 #Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 
-    user_score = calculate_score(user_cards)
-    computer_score = calculate_score(computer_cards)
+    def calculate_decks():
+        user_score = calculate_score(user_cards)
+        computer_score = calculate_score(computer_cards)
 
-    if user_score == 0 or computer_score == 0 or user_score > 21:
-        play_game = False
+        if user_score == 0 or computer_score == 0 or user_score > 21:
+            play_game = False
 
-#Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
+    #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
-    draw_card = input("Would you like to draw another card? Type 'y' or 'n'.\n")
+        draw_card = input("Would you like to draw another card? Type 'y' or 'n'.\n")
 
-    if draw_card == 'y':
-        user_cards.append(deal_card())
+        if draw_card == 'y':
+            user_cards.append(deal_card())
 
-        print(user_cards)
-        print(sum(user_cards))
-    elif draw_card == 'n':
-        play_game = False
+            print(user_cards)
+            print(sum(user_cards))
+        elif draw_card == 'n':
+            play_game = False
+
+    calculate_decks()
 
 #Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
 
