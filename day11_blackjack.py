@@ -176,6 +176,8 @@ while play_game is True:
 
     #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
+#Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
+
         draw_card = input("Would you like to draw another card? Type 'y' or 'n'.\n")
 
         if draw_card == 'y':
@@ -183,12 +185,12 @@ while play_game is True:
 
             print(user_cards)
             print(sum(user_cards))
+
+            calculate_decks()
         elif draw_card == 'n':
             play_game = False
 
     calculate_decks()
-
-#Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
 
 #Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
 
