@@ -137,7 +137,7 @@ while play_game is True:
     user_cards = []
     computer_cards = []
 
-    for _ in range(2)
+    for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
 
