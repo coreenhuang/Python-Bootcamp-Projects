@@ -8,4 +8,10 @@
 ### Day 6: Escaping the Maze
 ### Day 7: Hangman
 ### Day 8: Caesar Cipher
+### Day 9: 
+### Day 10: 
+### Day 11: Blackjack
+### Day 12: 
+
+
 
