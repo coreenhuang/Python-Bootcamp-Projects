@@ -54,6 +54,12 @@ def deal_card():
     return random.choice(cards)
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
+user_cards = []
+computer_cards = []
+
+for deal in range(2):
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
 
 
 
