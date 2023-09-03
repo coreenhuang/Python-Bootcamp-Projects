@@ -9,22 +9,36 @@ logo = """
                                                                                            
 """
 
-#Select target number
-target_number = random.randint(1,100)
+game_on = True
 
-#Print welcome text
-print(logo)
-print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
+while game_on:
+   #Select target number
+   target_number = random.randint(1,100)
 
-#Allocate number of lives based on difficulty selection
-difficulty_selection = input("Choose a diffculty. Type 'easy' or 'hard': ")
+   #Print welcome text
+   print(logo)
+   print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
 
-if difficulty_selection == 'easy':
-    number_of_lives = 10
-elif difficulty_selection == 'hard':
-    number_of_lives = 5
-else:
-    print("Invalid input. Please try again.")
+   #Allocate number of lives based on difficulty selection
+   difficulty_selection = input("Choose a diffculty. Type 'easy' or 'hard': ")
 
-#Commence guessing
-number_guess = input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: ")
+   if difficulty_selection == 'easy':
+      number_of_lives = 10
+   elif difficulty_selection == 'hard':
+      number_of_lives = 5
+   else:
+      print("Invalid input. Please try again.")
+      quit()
+
+   #Commence guessing
+   number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
+
+   if number_guess == target_number:
+      print("You win!")
+      game_on = False
+   elif number_guess > target_number:
+      number_of_lives -= 1
+      print(f"Your guess is too high. Guess again.")
+   else:
+      number_of_lives -= 1
+      print(f"Your guess is too low. Guess again.")
