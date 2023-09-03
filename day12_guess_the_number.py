@@ -9,12 +9,14 @@ logo = """
                                                                                            
 """
 
+#Select target number
 target_number = random.randint(1,100)
-# print(target_number)
 
+#Print welcome text
 print(logo)
 print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
 
+#Allocate number of lives based on difficulty selection
 difficulty_selection = input("Choose a diffculty. Type 'easy' or 'hard': ")
 
 if difficulty_selection == 'easy':
