@@ -28,17 +28,29 @@ while game_on:
       number_of_lives = 5
    else:
       print("Invalid input. Please try again.")
-      quit()
+      game_on = False
 
    #Commence guessing
-   number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
+   def guess_the_number():
+      global number_of_lives
+      global game_on
 
-   if number_guess == target_number:
-      print("You win!")
-      game_on = False
-   elif number_guess > target_number:
-      number_of_lives -= 1
-      print(f"Your guess is too high. Guess again.")
-   else:
-      number_of_lives -= 1
-      print(f"Your guess is too low. Guess again.")
+      number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
+
+      if number_guess == target_number:
+         print("You win!")
+         game_on = False
+      elif number_guess > target_number:
+         number_of_lives -= 1
+         print(f"Your guess is too high. Guess again.")
+         guess_the_number()
+      else:
+         number_of_lives -= 1
+         print(f"Your guess is too low. Guess again.")
+         guess_the_number()
+
+      if number_of_lives == 0:
+         print("You have no more attempts. You lose.")
+         game_on = False
+
+   guess_the_number()
