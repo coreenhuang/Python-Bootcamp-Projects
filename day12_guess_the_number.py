@@ -17,11 +17,10 @@ print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1
 
 difficulty_selection = input("Choose a diffculty. Type 'easy' or 'hard': ")
 
-number_of_lives = 0
-
 if difficulty_selection == 'easy':
     number_of_lives = 10
 elif difficulty_selection == 'hard':
     number_of_lives = 5
 else:
     print("Invalid input. Please try again.")
+
