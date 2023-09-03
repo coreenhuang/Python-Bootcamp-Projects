@@ -26,3 +26,5 @@ elif difficulty_selection == 'hard':
 else:
     print("Invalid input. Please try again.")
 
+#Commence guessing
+number_guess = input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: ")
