@@ -9,6 +9,9 @@ logo = """
                                                                                            
 """
 
+EASY_LEVEL_LIVES = 10
+HARD_LEVEL_LIVES = 5
+
 #Function to evaluate guess with target answer
 def evaluate_guess(guess, target, turns):
    """Compare guessed number with target number. Returns remaining number of lives."""
@@ -26,9 +29,9 @@ def select_difficulty():
    """Return number of lives depending on difficulty level."""
    difficulty = input("Choose a diffculty. Type 'easy' or 'hard': ")
    if difficulty == "easy":
-      return 10
+      return EASY_LEVEL_LIVES
    else:
-      return 5
+      return HARD_LEVEL_LIVES
 
 def game_on():
 
