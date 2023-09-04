@@ -23,6 +23,7 @@ def evaluate_guess(guess, target, turns):
       print(f"Your guess is too low. Guess again.")
       return turns - 1
 
+#Choose difficulty
 def select_difficulty():
    difficulty = input("Choose a diffculty. Type 'easy' or 'hard': ")
    if difficulty == "easy":
@@ -33,7 +34,7 @@ def select_difficulty():
       print("Not a valid option. Please try again.")
       return
 
-while game_on:
+def game_on():
    #Select target number
    target_number = randint(1,100)
 
@@ -66,5 +67,4 @@ while game_on:
 
       number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
 
-
-   guess_the_number()
+game_on()
