@@ -46,7 +46,7 @@ while game_on:
 
       #Evaluate guess
       if number_guess == target_number:
-         print("You win!")
+         print(f"You win! The answer is {target_number}.")
          game_on = False
       elif number_guess > target_number:
          number_of_lives -= 1
