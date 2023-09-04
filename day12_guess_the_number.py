@@ -16,7 +16,7 @@ HARD_NUMBER_OF_LIVES = 5
 def evaluate_guess(guess, target, turns):
    """compare guess with target, returns remaining number of attempts"""
    if guess == target:
-      print(f"You win! The answer is {target_number}.")
+      print(f"You win! The answer is {target}.")
    elif guess > target:
       print(f"Your guess is too high. Guess again.")
       return turns - 1
@@ -37,12 +37,13 @@ def select_difficulty():
 
 def game_on():
 
+   #Select target number
+   target_number = randint(1,100)
+   
    #Print logo and welcome text
    print(logo)
    print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
 
-   #Select target number
-   target_number = randint(1,100)
 
    #Obtain number of lives based on difficulty selected
    number_of_lives = select_difficulty()
