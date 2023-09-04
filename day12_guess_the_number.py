@@ -39,35 +39,23 @@ def game_on():
 
    #Select target number
    target_number = randint(1,100)
-   
+
    #Print logo and welcome text
    print(logo)
    print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
 
-
    #Obtain number of lives based on difficulty selected
-   number_of_lives = select_difficulty()
+   available_lives = select_difficulty()
 
-   if difficulty_selection == 'easy':
-      number_of_lives = 10
-   elif difficulty_selection == 'hard':
-      number_of_lives = 5
-   else:
-      print("Invalid input. Please try again.")
-      game_on = False
-      quit()
+   guess_input = 0
 
-   #Commence guessing - using recursion
-   def guess_the_number():
-      global number_of_lives
-      global game_on
+   while guess_input != target_number:
 
-      #Game over if no more lives
-      if number_of_lives == 0:
-         print("You have no more attempts. You lose.")
-         game_on = False
-         quit()
+      
 
-      number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
+
+
+
+
 
 game_on()
