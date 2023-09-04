@@ -12,16 +12,16 @@ logo = """
 game_on = True
 
 #Function to svaluate guess with target answer
-def evaluate_answer(guess, target, turns):
+def evaluate_guess(guess, target, turns):
    """compare guess with target, returns remaining number of attempts"""
    if guess == target:
       print(f"You win! The answer is {target_number}.")
    elif guess > target:
       print(f"Your guess is too high. Guess again.")
-      return turns -= 1
+      return turns - 1
    else:
-      turns -= 1
-      return print(f"Your guess is too low. Guess again.")
+      print(f"Your guess is too low. Guess again.")
+      return turns - 1
 
 while game_on:
    #Select target number
