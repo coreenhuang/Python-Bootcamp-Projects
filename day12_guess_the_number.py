@@ -26,11 +26,8 @@ def select_difficulty():
    difficulty = input("Choose a diffculty. Type 'easy' or 'hard': ")
    if difficulty == "easy":
       return 10
-   elif difficulty == "hard":
-      return 5
    else:
-      print("Not a valid option. Please try again.")
-      return
+      return 5
 
 def game_on():
 
