@@ -35,12 +35,13 @@ def select_difficulty():
       return
 
 def game_on():
-   #Select target number
-   target_number = randint(1,100)
 
-   #Print welcome text
+   #Print logo and welcome text
    print(logo)
    print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
+   
+   #Select target number
+   target_number = randint(1,100)
 
    #Allocate number of lives based on difficulty selection
    difficulty_selection = input("Choose a diffculty. Type 'easy' or 'hard': ")
