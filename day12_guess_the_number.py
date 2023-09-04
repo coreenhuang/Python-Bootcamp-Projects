@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 logo = """
    ______                        __  __            _   __                __              __
@@ -13,7 +13,7 @@ game_on = True
 
 while game_on:
    #Select target number
-   target_number = random.randint(1,100)
+   target_number = randint(1,100)
 
    #Print welcome text
    print(logo)
