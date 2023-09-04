@@ -9,7 +9,8 @@ logo = """
                                                                                            
 """
 
-game_on = True
+EASY_NUMBER_OF_LIVES = 10
+HARD_NUMBER_OF_LIVES = 5
 
 #Function to svaluate guess with target answer
 def evaluate_guess(guess, target, turns):
@@ -23,13 +24,13 @@ def evaluate_guess(guess, target, turns):
       print(f"Your guess is too low. Guess again.")
       return turns - 1
 
-#Choose difficulty
+#Function to return number of lives depending on difficulty selection
 def select_difficulty():
    difficulty = input("Choose a diffculty. Type 'easy' or 'hard': ")
    if difficulty == "easy":
-      return 10
+      return EASY_NUMBER_OF_LIVES
    elif difficulty == "hard":
-      return 5
+      return HARD_NUMBER_OF_LIVES
    else:
       print("Not a valid option. Please try again.")
       return
@@ -39,12 +40,12 @@ def game_on():
    #Print logo and welcome text
    print(logo)
    print(f"Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nPssst, the correct answer is {target_number}")
-   
+
    #Select target number
    target_number = randint(1,100)
 
-   #Allocate number of lives based on difficulty selection
-   difficulty_selection = input("Choose a diffculty. Type 'easy' or 'hard': ")
+   #Obtain number of lives based on difficulty selected
+   number_of_lives = select_difficulty()
 
    if difficulty_selection == 'easy':
       number_of_lives = 10
