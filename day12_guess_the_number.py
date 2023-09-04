@@ -29,11 +29,18 @@ while game_on:
    else:
       print("Invalid input. Please try again.")
       game_on = False
+      quit()
 
    #Commence guessing - using recursion
    def guess_the_number():
       global number_of_lives
       global game_on
+
+      #Game over if no more lives
+      if number_of_lives == 0:
+         print("You have no more attempts. You lose.")
+         game_on = False
+         quit()
 
       number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
 
@@ -49,10 +56,5 @@ while game_on:
          number_of_lives -= 1
          print(f"Your guess is too low. Guess again.")
          guess_the_number()
-
-      #Game over if no more lives
-      if number_of_lives == 0:
-         print("You have no more attempts. You lose.")
-         game_on = False
 
    guess_the_number()
