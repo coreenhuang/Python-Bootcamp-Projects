@@ -12,14 +12,14 @@ logo = """
 #Function to evaluate guess with target answer
 def evaluate_guess(guess, target, turns):
    """Compare guessed number with target number. Returns remaining number of lives."""
-   if guess == target:
-      print(f"You win! The answer is {target}.")
+   if guess < target:
+      print(f"Your guess is too low.")
+      return turns - 1
    elif guess > target:
       print(f"Your guess is too high.")
       return turns - 1
    else:
-      print(f"Your guess is too low.")
-      return turns - 1
+      print(f"You win! The answer is {target}.")
 
 #Function to return number of lives depending on difficulty selection
 def select_difficulty():
