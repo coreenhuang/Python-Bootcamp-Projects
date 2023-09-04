@@ -11,6 +11,18 @@ logo = """
 
 game_on = True
 
+#Function to svaluate guess with target answer
+def evaluate_answer(guess, target, turns):
+   """compare guess with target, returns remaining number of attempts"""
+   if guess == target:
+      print(f"You win! The answer is {target_number}.")
+   elif guess > target:
+      print(f"Your guess is too high. Guess again.")
+      return turns -= 1
+   else:
+      turns -= 1
+      return print(f"Your guess is too low. Guess again.")
+
 while game_on:
    #Select target number
    target_number = randint(1,100)
@@ -44,17 +56,5 @@ while game_on:
 
       number_guess = int(input(f"You have {number_of_lives} attempts remaining to guess the number.\nMake a guess: "))
 
-      #Evaluate guess
-      if number_guess == target_number:
-         print(f"You win! The answer is {target_number}.")
-         game_on = False
-      elif number_guess > target_number:
-         number_of_lives -= 1
-         print(f"Your guess is too high. Guess again.")
-         guess_the_number()
-      else:
-         number_of_lives -= 1
-         print(f"Your guess is too low. Guess again.")
-         guess_the_number()
 
    guess_the_number()
