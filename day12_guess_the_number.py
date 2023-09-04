@@ -30,6 +30,7 @@ def select_difficulty():
    elif difficulty == "hard":
       return 5
    else:
+      print("Not a valid option. Please try again.")
       return
 
 while game_on:
