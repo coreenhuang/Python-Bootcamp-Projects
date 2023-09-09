@@ -24,6 +24,6 @@ option_a = data[index_a]
 option_b = data[index_b]
 
 print(logo)
-print(option_a)
+print(f"Compare A: {option_a['name']}, a {option_a['description']}, from {option_a['country']}.")
 print(vs)
-print(option_b)
+print(f"Against B: {option_b['name']}, a {option_b['description']}, from {option_b['country']}.")
