@@ -1,6 +1,7 @@
 from art import *
 from data import data
 from random import randint
+import os
 
 #Function to generate a random index number
 def generate_random_index():
@@ -51,8 +52,10 @@ while play_game:
         option_b = data[generate_random_index()]
         while index_a == index_b:
             index_b = generate_random_index()
+        os.system('clear')
     else:
         #End game if not correct and display score
+        os.system('clear')
         print(logo)
         print(f"Sorry, that's wrong. Final score: {score}")
         play_game = False
