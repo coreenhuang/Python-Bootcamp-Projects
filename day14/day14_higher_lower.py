@@ -34,6 +34,12 @@ print(f"Against B: {option_b['name']}, a {option_b['description']}, from {option
 
 guess = input("Who has more followers? Type 'A' or 'B': ")
 
+if guess == compare_followers(option_a, option_b):
+    print("correct")
+    
+else:
+    print("not correct")
+
 print(option_a['follower_count'])
 print(option_b['follower_count'])
 
