@@ -45,20 +45,14 @@ while play_game:
 
     #Compare number of followers between both options
     if guess == compare_followers(option_a, option_b):
-        print("correct")
+        #If correct, score + 1, option A becomes B, new option B
         score += 1
         option_a = option_b
         option_b = data[generate_random_index()]
         while index_a == index_b:
             index_b = generate_random_index()
     else:
-        print("not correct")
+        #End game if not correct and display score
         print(logo)
         print(f"Sorry, that's wrong. Final score: {score}")
         play_game = False
-
-    print(option_a['follower_count'])
-    print(option_b['follower_count'])
-
-    print(compare_followers(option_a, option_b))
-
