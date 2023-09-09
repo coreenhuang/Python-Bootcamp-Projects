@@ -12,7 +12,16 @@ from random import randint
 # print(data[0]['description'])
 # print(data[0]['country'])
 
+#Function to generate a random index number
 def generate_random_index():
     return randint(0, len(data) - 1)
 
-generate_random_index()
+#Generate random indexes for option A and B
+index_a = generate_random_index()
+index_b = generate_random_index()
+
+#Regenerate index for B if it is the same as A
+while index_a == index_b:
+    index_b = generate_random_index()
+
+print(index_a, index_b)
