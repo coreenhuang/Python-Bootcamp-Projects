@@ -2,12 +2,17 @@ from art import *
 from data import data
 from random import randint
 
-print(logo)
-print(vs)
+# print(logo)
+# print(vs)
 
-print(randint(0,len(data) - 1))
+# print(randint(0,len(data) - 1))
 
-print(data[0]['name'])
-print(data[0]['follower_count'])
-print(data[0]['description'])
-print(data[0]['country'])
+# print(data[0]['name'])
+# print(data[0]['follower_count'])
+# print(data[0]['description'])
+# print(data[0]['country'])
+
+def generate_random_index():
+    return randint(0, len(data) - 1)
+
+generate_random_index()
