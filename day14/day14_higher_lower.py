@@ -11,7 +11,7 @@ def compare_followers(option_1, option_2):
     """Returns whoever has more followers, A or B"""
     if option_1['follower_count'] > option_2['follower_count']:
         return 'A'
-    else
+    else:
         return 'B'
 
 #Generate random indexes for option A and B
@@ -34,3 +34,7 @@ print(f"Against B: {option_b['name']}, a {option_b['description']}, from {option
 
 guess = input("Who has more followers? Type 'A' or 'B': ")
 
+print(option_a['follower_count'])
+print(option_b['follower_count'])
+
+print(compare_followers(option_a, option_b))
