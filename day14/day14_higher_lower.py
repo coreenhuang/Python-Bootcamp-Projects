@@ -23,7 +23,11 @@ while index_a == index_b:
 option_a = data[index_a]
 option_b = data[index_b]
 
+#Start Game - Display art and options for user to choose
 print(logo)
 print(f"Compare A: {option_a['name']}, a {option_a['description']}, from {option_a['country']}.")
 print(vs)
 print(f"Against B: {option_b['name']}, a {option_b['description']}, from {option_b['country']}.")
+
+guess = input("Who has more followers? Type 'A' or 'B': ")
+
