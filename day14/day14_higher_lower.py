@@ -2,11 +2,6 @@ from art import *
 from data import data
 from random import randint
 
-# print(logo)
-# print(vs)
-
-# print(randint(0,len(data) - 1))
-
 # print(data[0]['name'])
 # print(data[0]['follower_count'])
 # print(data[0]['description'])
@@ -28,5 +23,7 @@ while index_a == index_b:
 option_a = data[index_a]
 option_b = data[index_b]
 
+print(logo)
 print(option_a)
+print(vs)
 print(option_b)
