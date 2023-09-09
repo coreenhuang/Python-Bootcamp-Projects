@@ -2,14 +2,17 @@ from art import *
 from data import data
 from random import randint
 
-# print(data[0]['name'])
-# print(data[0]['follower_count'])
-# print(data[0]['description'])
-# print(data[0]['country'])
-
 #Function to generate a random index number
 def generate_random_index():
     return randint(0, len(data) - 1)
+
+#Compare number of followers
+def compare_followers(option_1, option_2):
+    """Returns whoever has more followers, A or B"""
+    if option_1['follower_count'] > option_2['follower_count']:
+        return 'A'
+    else
+        return 'B'
 
 #Generate random indexes for option A and B
 index_a = generate_random_index()
