@@ -41,7 +41,7 @@ while play_game:
     print(vs)
     print(f"Against B: {format_option_data(option_b)}.")
 
-    guess = input("Who has more followers? Type 'A' or 'B': ")
+    guess = input("Who has more followers? Type 'A' or 'B': ").upper()
 
     #Compare number of followers between both options
     if guess == compare_followers(option_a, option_b):
