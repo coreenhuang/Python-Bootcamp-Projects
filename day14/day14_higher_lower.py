@@ -11,6 +11,7 @@ def compare_followers(option_1, option_2):
     else:
         return 'B'
 
+#Function to format the data for each option into a string
 def format_option_data(option):
     """Returns a string with name, description, and country"""
     name = option["name"]
