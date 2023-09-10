@@ -37,9 +37,9 @@ while play_game:
     if score > 0:
         print(f"You're right! Current score: {score}.")
 
-    print(f"Compare A: {option_a['name']}, a {option_a['description']}, from {option_a['country']}.")
+    print(f"Compare A: {format_option_data(option_a)}.")
     print(vs)
-    print(f"Against B: {option_b['name']}, a {option_b['description']}, from {option_b['country']}.")
+    print(f"Against B: {format_option_data(option_b)}.")
 
     guess = input("Who has more followers? Type 'A' or 'B': ")
 
