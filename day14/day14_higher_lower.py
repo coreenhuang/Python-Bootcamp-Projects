@@ -1,11 +1,7 @@
 from art import *
 from data import data
-from random import randint
+from random import choice
 import os
-
-#Function to generate a random index number
-def generate_random_index():
-    return randint(0, len(data) - 1)
 
 #Function to compare number of followers
 def compare_followers(option_1, option_2):
@@ -15,17 +11,13 @@ def compare_followers(option_1, option_2):
     else:
         return 'B'
 
-#Generate random indexes for option A and B
-index_a = generate_random_index()
-index_b = generate_random_index()
-
-#Regenerate index for B if it is the same as A
-while index_a == index_b:
-    index_b = generate_random_index()
-
 #Generate options from data dictionary
-option_a = data[index_a]
-option_b = data[index_b]
+option_a = choice(data)
+option_b = choice(data)
+
+#Regenerate option for B if equal to A
+while option_a == option_b:
+    option_b = choice(data)
 
 #Introduce score and play game variables
 score = 0
@@ -49,9 +41,9 @@ while play_game:
         #If correct, score + 1, option A becomes B, new option B
         score += 1
         option_a = option_b
-        option_b = data[generate_random_index()]
-        while index_a == index_b:
-            index_b = generate_random_index()
+        option_b = choice(data)
+        while option_a == option_b:
+            option_b = choice(data)
         os.system('clear')
     else:
         #End game if not correct and display score
