@@ -11,6 +11,13 @@ def compare_followers(option_1, option_2):
     else:
         return 'B'
 
+def format_option_data(option):
+    """Returns a string with name, description, and country"""
+    name = option["name"]
+    description = option["description"]
+    country = option["country"]
+    return f"{name}, a {description}, from {country}"
+
 #Generate options from data dictionary
 option_a = choice(data)
 option_b = choice(data)
